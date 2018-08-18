@@ -1,6 +1,7 @@
 package com.example.dlarb.a2b2o2.Activity;
 
 import android.app.ProgressDialog;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -51,6 +52,10 @@ public class RegisterActivity extends AppCompatActivity {
                         if (response.code() == 200) {
                             User user = response.body();
                             if (user != null) {
+                                SharedPreferences prefs = getSharedPreferences("hernum",MODE_PRIVATE);
+                                SharedPreferences.Editor editor = prefs.edit();
+                                editor.putString("hernum",her.getText().toString());
+                                editor.apply();
                                 Toast.makeText(getApplicationContext(), "회원가입 완료", Toast.LENGTH_SHORT).show();
                                 finish();
                             }

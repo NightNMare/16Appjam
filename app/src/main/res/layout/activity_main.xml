@@ -1,16 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/dark_background_chat"
+    android:orientation="vertical"
     tools:context=".Activity.MainActivity">
 
-    <Button
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:alpha="0.7"
+        android:background="#604765"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fontFamily="@font/nanumsquareround_bold"
+            android:gravity="center"
+            android:text="M.A.M"
+            android:textColor="#f1e6d9"
+            android:textSize="30sp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="chatting"
-        android:id="@+id/random"/>
+        android:layout_gravity="center"
+        android:id="@+id/calling"
+        android:src="@drawable/ic_telephone" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/nanumsquareround_bold"
+        android:lineSpacingExtra="8sp"
+        android:text="진행중인 채팅이 없습니다.\n채팅을 진행하시려면 '전애인'에게 전화를 걸어주세요."
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_weight="1.4" />
 </LinearLayout>

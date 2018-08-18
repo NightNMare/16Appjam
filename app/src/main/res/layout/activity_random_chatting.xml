@@ -11,45 +11,80 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="96dp"
+        android:alpha="0.6"
         android:background="#604765"
-        android:orientation="vertical">
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fontFamily="@font/nanumsquareround_bold"
+            android:gravity="center"
+            android:paddingLeft="65dp"
+            android:text="M.A.M"
+            android:textColor="#f1e6d9"
+            android:textSize="30sp" />
 
         <ImageView
-            android:layout_width="96dp"
-            android:layout_height="96dp"
-            android:layout_gravity="center"
-            android:padding="8dp"
-            android:src="@drawable/splash_icon_bigger" />
+            android:id="@+id/restaurant"
+            android:layout_width="65dp"
+            android:layout_height="match_parent"
+            android:paddingRight="20dp"
+            android:src="@drawable/restaurant" />
+
     </LinearLayout>
 
     <View
         android:layout_width="wrap_content"
         android:layout_height="16dp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:layout_marginLeft="8dp"
-        android:background="@mipmap/left"
-        android:text="asd"
-        android:textColor="#150318"
-        android:textSize="30sp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:layout_marginRight="8dp"
-        android:background="@mipmap/right"
-        android:text="asd"
-        android:textColor="#f0e8e8"
-        android:textSize="30sp" />
-
-    <android.support.v4.widget.Space
-        android:layout_width="1dp"
+    <LinearLayout
+        android:id="@+id/chatting"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/left"
+            android:gravity="center"
+            android:text="안녕하세요"
+            android:textColor="#150318"
+            android:textSize="22sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="@mipmap/right"
+            android:gravity="center"
+            android:text="안녕하세요"
+            android:textColor="#f0e8e8"
+            android:textSize="22sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/left"
+            android:gravity="center"
+            android:text="저녁 ㄱ?"
+            android:textColor="#150318"
+            android:textSize="22sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="낯선이가 대화를 종료했습니다."
+            android:textAlignment="center"
+            android:layout_marginTop="16dp"
+            android:textSize="20sp"
+            android:textColor="#fff"/>
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -57,17 +92,19 @@
         android:orientation="horizontal">
 
         <EditText
+            android:id="@+id/edit_text"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="#fff"
             android:backgroundTint="#fff"
+            android:inputType="text"
             android:paddingLeft="8dp"
             android:textSize="20sp"
-            tools:text="asdsad"
-            android:inputType="text" />
+            android:text="그럴까요?" />
 
         <ImageView
+            android:id="@+id/send"
             android:layout_width="52dp"
             android:layout_height="48dp"
             android:background="#6d5672"
