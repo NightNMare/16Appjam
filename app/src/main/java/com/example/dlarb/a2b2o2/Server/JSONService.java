@@ -10,22 +10,10 @@ import retrofit2.http.POST;
 public interface JSONService {
 
     @FormUrlEncoded
-    @POST("/login")
-    Call<User> login(@Field("user_id") String user_id, @Field("user_password") String user_pw);
+    @POST("/signin")
+    Call<User> signin(@Field("id") String id, @Field("passwd") String passwd);
 
     @FormUrlEncoded
-    @POST("/register")
-    Call<User> register(@Field("user_id") String user_id, @Field("user_password") String user_pw, @Field("user_name") String user_name);
-
-    @FormUrlEncoded
-    @POST("/loadlist")
-    Call<List<User>> loadlist();
-
-    @FormUrlEncoded
-    @POST("/savechat")
-    Call<Chat> save(@Field("roomnumber") String room, @Field("who") String who, @Field("msg") String msg);
-
-    @FormUrlEncoded
-    @POST("/loadlist")
-    Call<List<Chat>> loadchat();
+    @POST("/signup")
+    Call<User> signup(@Field("id") String id, @Field("passwd") String passwd, @Field("phone") String phone, @Field("her") String her);
 }

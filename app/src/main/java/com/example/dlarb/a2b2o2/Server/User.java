@@ -6,13 +6,11 @@ public class User {
     public String passwd;
     public String phone;
     public String her;
-    public String token;
 
-    public User(String id, String passwd, String phone, String her, String token){
+    public User(String id, String passwd, String phone, String her){
         this.id = id;
         this.passwd = passwd;
         this.phone = phone;
         this.her = her;
-        this.token = token;
     }
 }

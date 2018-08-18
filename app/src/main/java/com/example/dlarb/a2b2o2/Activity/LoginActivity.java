@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -39,12 +40,13 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 progress_dialog = new ProgressDialog(LoginActivity.this);
-                progress_dialog.setMessage("로그인 중입니다 ... ");
+                progress_dialog.setMessage("로그인 중입니다");
                 progress_dialog.show();
-                Call<User> call = NetworkHelper.getInstance().login(id.getText().toString(), passwd.getText().toString());
+                Call<User> call = NetworkHelper.getInstance().signin(id.getText().toString(), passwd.getText().toString());
                 call.enqueue(new Callback<User>() {
                     @Override
                     public void onResponse(Call<User> call, Response<User> response) {
+                        Log.e("error", response.message() +"     "+ response.code());
                         if (response.code() == 200) {
                             User user = response.body();
                             if (user != null) {
