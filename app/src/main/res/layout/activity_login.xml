@@ -4,30 +4,74 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     android:orientation="vertical"
+    android:weightSum="10"
     tools:context=".Activity.LoginActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="42dp"
+        android:src="@drawable/splash_icon" />
+
+    <android.support.v4.widget.Space
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_weight="4.7" />
 
     <EditText
         android:id="@+id/id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:fontFamily="@font/nanumsquareround_regular"
+        android:backgroundTint="#f1e6d9"
+        android:paddingLeft="12dp"
+        android:hint="ID"
+        android:textColor="#f1e6d9"
+        android:textColorHint="#f1e6d9" />
 
     <EditText
         android:id="@+id/passwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:paddingLeft="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="16dp"
+        android:backgroundTint="#f1e6d9"
+        android:hint="PASSWORD"
+        android:fontFamily="@font/nanumsquareround_regular"
         android:inputType="textPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:textColor="#f1e6d9"
+        android:textColorHint="#f1e6d9" />
 
     <Button
+        android:textAllCaps="false"
         android:id="@+id/login"
-        android:layout_width="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="로그인" />
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/round_rec"
+        android:backgroundTint="#f1e6d9"
+        android:fontFamily="@font/nanumsquareround_regular"
+        android:text="Login"
+        android:textColor="#604765"
+        android:textSize="20sp" />
 
-    <Button
+    <TextView
         android:id="@+id/register"
+        android:layout_marginTop="16dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="회원가입" />
+        android:layout_gravity="center"
+        android:fontFamily="@font/nanumsquareround_regular"
+        android:text="계정이 없으신가요?"
+        android:textColor="#f1e6d9" />
 
 </LinearLayout>

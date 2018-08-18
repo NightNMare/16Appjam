@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.dlarb.a2b2o2.R;
@@ -24,7 +25,7 @@ public class LoginActivity extends AppCompatActivity {
     Button login;
     EditText id;
     EditText passwd;
-    Button register;
+    TextView register;
     ProgressDialog progress_dialog;
 
     @Override
