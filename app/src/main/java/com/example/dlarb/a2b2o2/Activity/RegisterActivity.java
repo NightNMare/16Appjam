@@ -1,11 +1,13 @@
 package com.example.dlarb.a2b2o2.Activity;
 
+import android.app.ProgressDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.dlarb.a2b2o2.R;
@@ -24,7 +26,7 @@ public class RegisterActivity extends AppCompatActivity {
     EditText her;
 
     Button register;
-    Button cancel;
+    TextView cancel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,8 +59,7 @@ public class RegisterActivity extends AppCompatActivity {
                         } else if (response.code() == 400) {
                             Toast.makeText(getApplicationContext(), "회원가입 실패", Toast.LENGTH_SHORT).show();
                         } else {
-                            Toast.makeText(getApplicationContext(), "나도 모르겠다", Toast.LENGTH_SHORT).show();
-
+                            Toast.makeText(getApplicationContext(), "예기치 못한 상황 발생", Toast.LENGTH_SHORT).show();
                         }
                     }
 

@@ -51,13 +51,16 @@ public class LoginActivity extends AppCompatActivity {
                         if (response.code() == 200) {
                             User user = response.body();
                             if (user != null) {
+                                progress_dialog.dismiss();
                                 Toast.makeText(getApplicationContext(), "로그인 성공", Toast.LENGTH_SHORT).show();
                                 Intent loginIntent = new Intent(LoginActivity.this, MainActivity.class);
                                 loginIntent.putExtra("name", user.id);
                                 loginIntent.putExtra("id", id.getText().toString());
                                 startActivity(loginIntent);
+                                finish();
                             }
                         } else if (response.code() == 404) {
+                            progress_dialog.dismiss();
                             Toast.makeText(getApplicationContext(), "로그인 실패", Toast.LENGTH_SHORT).show();
                         }
                     }

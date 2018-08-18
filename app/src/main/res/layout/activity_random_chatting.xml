@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_darker"
+    android:orientation="vertical"
+    tools:context=".Activity.RandomChatting">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:background="#604765"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_gravity="center"
+            android:padding="8dp"
+            android:src="@drawable/splash_icon_bigger" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginLeft="8dp"
+        android:background="@mipmap/left"
+        android:text="asd"
+        android:textColor="#150318"
+        android:textSize="30sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="8dp"
+        android:background="@mipmap/right"
+        android:text="asd"
+        android:textColor="#f0e8e8"
+        android:textSize="30sp" />
+
+    <android.support.v4.widget.Space
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#fff"
+            android:backgroundTint="#fff"
+            android:paddingLeft="8dp"
+            android:textSize="20sp"
+            tools:text="asdsad"
+            android:inputType="text" />
+
+        <ImageView
+            android:layout_width="52dp"
+            android:layout_height="48dp"
+            android:background="#6d5672"
+            android:paddingBottom="12dp"
+            android:paddingTop="12dp"
+            android:src="@drawable/ic_send" />
+    </LinearLayout>
+</LinearLayout>
